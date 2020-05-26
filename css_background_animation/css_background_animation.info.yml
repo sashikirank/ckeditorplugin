@@ -1,0 +1,5 @@
+name: 'CSS Background Animation'
+description: 'CSS background animations.'
+type: module
+package: Other
+core_version_requirement: ^8 || ^9

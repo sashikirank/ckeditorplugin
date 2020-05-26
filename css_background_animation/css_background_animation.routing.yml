@@ -1,0 +1,7 @@
+css_background_animation.form:
+ path: '/admin/config/user-interface/css-background-animation'
+ defaults:
+   _title: 'CSS Background Animation'
+   _form: '\Drupal\css_background_animation\Form\cssBackgroundAnimationAdmin'
+ requirements:
+   _permission: 'access content'

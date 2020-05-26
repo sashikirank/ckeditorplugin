@@ -1,0 +1,39 @@
+<?php
+use Drupal\node\Entity\node;
+use Drupal\file\Entity\File;
+use Symfony\Component\PropertyAccess\PropertyAccess;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+use Drupal\views\Views;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Exception\RequestException;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Core\Render\Markup;
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\HtmlCommand;
+
+function css_background_animation_preprocess_html(&$variables) {
+  $config = \Drupal::config('css_background_animation.settings');
+
+  $css_selector = $config->get();
+  $variables['#attached']['drupalSettings']['css_background_animation']['css_selector'] = $css_selector['css_background_animation']['css_selector'];
+  $variables['#attached']['drupalSettings']['css_background_animation']['shape'] = $css_selector['css_background_animation']['shape'];
+  $variables['#attached']['drupalSettings']['css_background_animation']['color'] = $css_selector['css_background_animation']['color'];
+  $variables['#attached']['drupalSettings']['css_background_animation']['small_count'] = $css_selector['css_background_animation']['small_count'];
+  $variables['#attached']['drupalSettings']['css_background_animation']['medium_count'] = $css_selector['css_background_animation']['medium_count'];
+  $variables['#attached']['drupalSettings']['css_background_animation']['large_count'] = $css_selector['css_background_animation']['large_count'];
+  $variables['#attached']['drupalSettings']['css_background_animation']['transition'] = $css_selector['css_background_animation']['transition'];
+}
+
+/**
+ * Implements hook_page_attachments(). Adds the library to every or selected pages.
+ */
+function css_background_animation_page_attachments(array &$page) {
+  // attach the dynamic libraries and the main library to all pages
+  //$config = \Drupal::config('animations.config');
+
+  $page['#attached']['library'][] = 'css_background_animation/css_background_animation';
+}

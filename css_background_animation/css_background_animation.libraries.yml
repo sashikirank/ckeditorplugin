@@ -1,0 +1,9 @@
+css_background_animation:
+  js:
+    js/css_background_animation.js: {}
+  css:
+    theme:
+      css/css_background_animation.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

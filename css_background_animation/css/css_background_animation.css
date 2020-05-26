@@ -1,0 +1,181 @@
+/**
+ * Variables
+ */
+:root {
+	--width-s: 100px;
+	--width-m: 150px;
+	--width-l: 200px;
+	--color: #eee;
+	--leftright: 6em;
+}
+
+/**
+ * Key frames
+ */
+@-webkit-keyframes grow {
+	to{
+		-webkit-transform: scale(0.5);
+		transform:scale(0.5);
+	}
+}
+@keyframes grow{
+	to{
+		-webkit-transform:scale(0.5);
+		transform:scale(0.5);
+	}
+}
+
+@-webkit-keyframes up-down{
+	to{
+		bottom:6em;
+	}
+}	
+@keyframes up-down{
+	to{
+		bottom:6em;
+	}
+}
+
+@-webkit-keyframes left-right{
+	to{
+		left:var(--leftright);
+	}
+}	
+@keyframes left-right{
+	to{
+		left:var(--leftright);
+	}
+}
+
+
+@-webkit-keyframes glow{
+	to{
+		opacity:0.5;
+	}
+}
+@keyframes glow{
+	to{
+		opacity:0.5;		
+	}
+}
+
+.animation-grow {    
+	-webkit-animation: grow 3s linear infinite alternate;
+	animation: grow 3s linear infinite alternate;
+}
+.animation-updown {
+	-webkit-animation: up-down 3s linear infinite alternate;
+	animation: up-down 3s linear infinite alternate;
+}
+
+.animation-leftright {
+	-webkit-animation: left-right 3s linear infinite alternate;
+	animation: left-right 3s linear infinite alternate;
+}
+
+.animation-glow {
+	-webkit-animation: glow 3s linear infinite alternate;
+	animation: glow 3s linear infinite alternate;
+}
+
+.animation-circle-s {
+    position: absolute;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color);
+    width: var(--width-s);
+    height: var(--width-s);
+    opacity: 1;
+    bottom: 2em;
+    z-index:-1;
+}
+.animation-circle-m {
+    position: absolute;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color);
+    width: var(--width-m);
+    height: var(--width-m);
+    opacity: 1;
+    bottom: 2em;
+    z-index:-1;
+}
+.animation-circle-l {
+    position: absolute;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color);
+    width: var(--width-l);
+    height: var(--width-l);
+    opacity: 1;
+    bottom: 2em;
+    z-index:-1;
+}
+
+.animation-bubble-s {
+    position: absolute;
+    border-radius: 50%;
+    border-width: 1px;    
+    background: var(--color);
+    width: var(--width-s);
+    height: var(--width-s);
+    opacity: 1;
+    bottom: 2em;
+    z-index:-1;
+}
+.animation-bubble-m {
+    position: absolute;
+    border-radius: 50%;
+    border-width: 1px;
+    background: var(--color);
+    width: var(--width-m);
+    height: var(--width-m);
+    opacity: 1;
+    bottom: 2em;
+    z-index:-1;
+}
+.animation-bubble-l {
+    position: absolute;
+    border-radius: 50%;
+    border-width: 1px;
+    background: var(--color);
+    width: var(--width-l);
+    height: var(--width-l);
+    opacity: 1;
+    bottom: 2em;
+    z-index:-1;
+}
+.animation-square-s {
+    position: absolute;
+    border-width: 1px;
+    background: var(--color);
+    width: var(--width-s);
+    height: var(--width-s);
+    opacity: 1;
+    bottom: 2em;
+    z-index:-1;
+}
+.animation-square-m {
+    position: absolute;
+    border-width: 1px;
+    background: var(--color);
+    width: var(--width-m);
+    height: var(--width-m);
+    opacity: 1;
+    bottom: 2em;
+    z-index:-1;
+}
+.animation-square-l {
+    position: absolute;
+    border-width: 1px;
+    background: var(--color);
+    width: var(--width-l);
+    height: var(--width-l);
+    opacity: 1;
+    bottom: 2em;
+    z-index:-1;
+}
+

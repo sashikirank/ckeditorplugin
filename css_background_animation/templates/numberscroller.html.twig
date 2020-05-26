@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Default theme implementation of the number scroller.
+ *
+ * Available variables:
+ * - start_value: Scroller starting value.
+ * - end_value: Scroller endinging value.
+ * - increment: Scroller increment value.
+ * - delay: Scroller delay value.
+ * - active_theme : Theme to be applied.
+ *
+ * @see number_scroller_theme()
+ *
+ * @ingroup themeable
+ */
+#}
+ 
+{{ attach_library('number_scroller/number_scroll') }}
+selected theme : {{ active_theme }}
+<div class="{{ active_theme }}">
+<span class="numscroller" data-min={{ start_value }} data-max={{ end_value }} data-delay={{ delay }} data-increment={{ increment }}>{{ end_value }}</span>
+</div>

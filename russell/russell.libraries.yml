@@ -1,0 +1,22 @@
+russell:
+  version: 1.x
+  css:
+    theme:
+      css/russell.css: {}
+  js:
+    js/russell.js: {}
+  dependencies:    
+    - core/jquery #Just ot be save
+    - core/drupal.dialog.ajax #Required for dialogs
+    - core/jquery.form #If you also want to use Ajax for form operations
+
+drupal.russell.drupalimage.admin:
+  version: VERSION
+  js:
+    js/russell.drupalimage.admin.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+    - core/drupal.vertical-tabs
+    - core/drupalSettings
